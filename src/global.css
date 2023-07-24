@@ -97,7 +97,33 @@ html, body{
   color: #fff;
 }
 
+/*ABOUT*/
+.css-1tnnsql.Mui-selected {
+  color: #169d49 !important;
+}
 
+.css-7ozjwe{
+  background-color: #169d49 !important
+}
+
+.css-j7qwjs{
+  height: 100% !important;
+  justify-content: space-around !important;
+}
+
+@media screen and (min-width:1024px) and (max-width:1439px){
+  #vertical-tabpanel-0, #vertical-tabpanel-1{
+    max-width: 400px !important;
+  }
+}
+
+@media screen and (min-width:1440px){
+  #vertical-tabpanel-0, #vertical-tabpanel-1{
+    max-width: 550px !important;
+  }
+}
+
+/*ESTILIZAÇÃO SCROLL BAR*/
 ::-webkit-scrollbar {
   width: 5px;
 }

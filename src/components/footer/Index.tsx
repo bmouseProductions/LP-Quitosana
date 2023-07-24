@@ -6,7 +6,7 @@ import Linkedin from '@mui/icons-material/Linkedin';
 
 export default function Footer() {
     return(
-        <footer className="w-full py-5 flex flex-col items-center gap-3 lg:flex-row justify-center lg:gap-20 text-white text-sm bg-[#f55303]">
+        <footer className="w-full py-5 flex flex-col items-center gap-3 lg:flex-row justify-center lg:gap-20 text-white text-sm bg-[#006131]">
             <div className='flex gap-2 justify-center items-center'>
             
                 <a href="https://www.facebook.com/empresapatense" target='_blank'> <FacebookIcon className='fill-white'/> </a>

@@ -7,11 +7,13 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 interface PropsAcordion {
     id: string;
     title: string;
+    image?: string;
     text: string;
     style:string;
+    styleImage?: string;
 }
 
-export default function Acordion( {id, title, text, style}:PropsAcordion ) {
+export default function AcordionComponent2( {id, title, image, text, style, styleImage}:PropsAcordion ) {
     return (
         <>
             <Accordion className={style}>
@@ -19,11 +21,10 @@ export default function Acordion( {id, title, text, style}:PropsAcordion ) {
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls={id}
                     id={id}
-                    className='rounded bg-[#f97d01] '
                 >
-                    <Typography className='font-bold'><p className='font-bold text-white fill-white'>{title}</p>  </Typography>
+                    <Typography className='flex font-bold'> <img src={image} alt="" className={styleImage} /> {title} </Typography>
                 </AccordionSummary>
-                <AccordionDetails className='rounded text-white'>
+                <AccordionDetails>
                     <Typography>
                         {text}
                     </Typography>
