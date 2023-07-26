@@ -20,7 +20,7 @@ const style = {
 
 interface ModalProps{
     title: string;
-    text: string;
+    text: string | React.ReactNode;
 }
 
 export default function ModalComponent( { title, text }:ModalProps ) {

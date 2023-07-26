@@ -115,8 +115,8 @@ export const Formulario = () => {
       <Button
         type="submit"
         variant="contained"
-        className="max-w-[320px]  md:max-w-none bg-[#ec5f1a] shadow-[0px_0px_20px_#ec5f1a] hover:bg-[#eab308] hover:shadow-[0px_0px_20px_#eab308] transition-all duration-200 mt-5"
-        endIcon={<SendIcon />}
+        className="botaoForm max-w-[320px]  md:max-w-none !text-black !bg-white shadow-[0px_0px_20px_#ec5f1a] hover:!bg-[#006131] hover:!text-white hover:shadow-[0px_0px_20px_#006131] !transition-all !duration-200 mt-5"
+        endIcon={<SendIcon id="SENDsvg"/>}
       >
         Enviar
       </Button>

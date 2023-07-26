@@ -1,4 +1,4 @@
-
+import { ReactNode } from 'react'
 import ModalComponent from '../../components/modal/Index'
 import Botao from '../../components/button/Index'
 
@@ -10,7 +10,7 @@ import alimenticia from '../../assets/icon-application/alimenticio.svg'
 import agua from '../../assets/icon-application/agua.svg'
 import saude from '../../assets/icon-application/saude.svg'
 
-
+import verify from '../../assets/verifica.svg'
 
 
 const icons = [
@@ -62,15 +62,57 @@ const icons = [
         img: saude,
         titleCard: 'Saúde',
         titleModal:"Aplicação da Quitosana na Área da Saúde" ,
-        text:"A quitosana tem sido estudada como uma alternativa aos coagulantes metálicos tradicionalmente usados no tratamento de água, sendo um coagulante natural. Além disso, novos materiais à base de quitosana estão sendo desenvolvidos para atuar como adsorventes de íons metálicos e corantes em águas residuais e efluentes, recebendo considerável atenção na área de adsorção devido ao seu alto potencial quelante.",
+        text: <ModalList />,
     },
 ]
+
+function ModalList(){
+    return (
+        <div >
+            <p>
+                A Quitosana tem muitas características úteis como biodegradabilidade, biocompatibilidade, bioadesividade e não-toxicidade. Essas propriedades o tornam um polímero natural de grande valor para aplicações farmacêuticas e cosméticas.
+            </p>
+
+            <ul className='mt-5 flex flex-col gap-2'>
+                <div className="flex gap-3">
+                    <img src={verify} alt=""/>
+                    <li>Curativo hemostático e cicatrização de feridas;</li>
+                </div>
+
+                <div className="flex gap-3">
+                    <img src={verify} alt=""/>
+                    <li>Biomaterial, bioengenharia;</li>
+                </div> 
+
+                <div className="flex gap-3">
+                    <img src={verify} alt=""/>
+                    <li>Sistema de liberação lenta de drogas;</li>
+                </div> 
+
+                <div className="flex gap-3">
+                    <img src={verify} alt=""/>
+                    <li>Tratamento de obesidade e controle de colesterol;</li>
+                </div> 
+
+                <div className="flex gap-3">
+                    <img src={verify} alt=""/>
+                    <li>Tratamento da Osteoartrite;</li>
+                </div> 
+
+                <div className="flex gap-3">
+                    <img src={verify} alt=""/>
+                    <li>Sanitizante e esterilizante à base de nanopartículas de prata estabilizadas com quitosana.</li>
+                </div> 
+            </ul>
+        </div>
+    )
+}
 
 interface CardProps{
     img: string,
     titleCard: string,
     titleModal: string,
-    text: string,
+    text: string | ReactNode,
 }
 
 function Card( { titleCard, titleModal, img, text }:CardProps ){
@@ -103,7 +145,7 @@ export default function SectionBeneficiosFranqueado(){
 
                         <div className='w-full flex justify-center mt-10'>
                             <Botao>
-                                Quero ser um franqueado
+                                Chamar no Whatsapp
                             </Botao>
                         </div>
                         
